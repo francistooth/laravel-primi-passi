@@ -22,9 +22,21 @@
         <header>
             <!-- place navbar here -->
         </header>
-        <main>
-            <div class="container">
+        <main class="container mt-5">
+            {{-- <div class="container">
                 Hello World!
+            </div> --}}
+
+            {{-- {{ $name }}
+            {{ $job }} --}}
+
+            <div class="card text-center" style="width:18rem;">
+              <img src="https://avatarfiles.alphacoders.com/233/thumb-1920-233330.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{ $name }}, {{ $age }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted"> {{ $job }} </h6>
+                <p class="card-text"> {{ $desc }} </p>
+              </div>
             </div>
         </main>
         <footer>
