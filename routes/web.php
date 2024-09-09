@@ -36,6 +36,8 @@ Route::get('/', function () {
         ],
     ];
 
+    // card per la condizione logica if
+
     $boolean = true;
 
     $boolcard = [
