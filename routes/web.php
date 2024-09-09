@@ -36,7 +36,17 @@ Route::get('/', function () {
         ],
     ];
 
-    return view('home', compact('cards'));
+    $boolean = true;
+
+    $boolcard = [
+        'src' => 'https://yt3.googleusercontent.com/UXFC9eFKxjbOcUeEiIFqpywdInXJijIrh5bkfUMPlKhCLKaO6rrTfh5O5IzNTS_2Wap2yBk1J44=s900-c-k-c0x00ffffff-no-rj',
+        'name' => 'Boolean S.R.C.',
+        'job' => 'Programming School',
+        'age' => 'x',
+        'desc' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum laborum nisi distinctio iure veritatis suscipit enim perferendis! Similique laboriosam optio incidunt, ipsum nulla a neque aperiam cupiditate sapiente expedita quas!',
+    ];
+
+    return view('home', compact('cards', 'boolean', 'boolcard'));
 
     // , compact('')
 });

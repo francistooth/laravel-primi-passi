@@ -42,6 +42,17 @@
                         </div>
                     </div>
                 @endforeach
+
+                @if ($boolean)
+                    <div class="card bg-info-500 text-center" style="width:18rem;">
+                        <img src="{{ $boolcard['src'] }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $boolcard['name'] }}, {{ $boolcard['age'] }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted"> {{ $boolcard['job'] }} </h6>
+                            <p class="card-text"> {{ $boolcard['desc'] }} </p>
+                        </div>
+                    </div>
+                @endif
             </div>
         </main>
         <footer>
