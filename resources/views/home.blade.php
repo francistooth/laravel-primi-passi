@@ -22,7 +22,7 @@
         <header>
             <!-- place navbar here -->
         </header>
-        <main class="container mt-5">
+        <main class="container w-75 mt-5">
             {{-- <div class="container">
                 Hello World!
             </div> --}}
@@ -30,13 +30,18 @@
             {{-- {{ $name }}
             {{ $job }} --}}
 
-            <div class="card text-center" style="width:18rem;">
-              <img src="https://avatarfiles.alphacoders.com/233/thumb-1920-233330.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">{{ $name }}, {{ $age }}</h5>
-                <h6 class="card-subtitle mb-2 text-muted"> {{ $job }} </h6>
-                <p class="card-text"> {{ $desc }} </p>
-              </div>
+            <div class="card-container w-100 d-flex gap-5">
+                @foreach ($cards as $card)
+                    {{-- @dump($card['src']) --}}
+                    <div class="card bg-info-500 text-center" style="width:18rem;">
+                        <img src="{{ $card['src'] }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $card['name'] }}, {{ $card['age'] }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted"> {{ $card['job'] }} </h6>
+                            <p class="card-text"> {{ $card['desc'] }} </p>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </main>
         <footer>
